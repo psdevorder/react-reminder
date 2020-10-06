@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { LOCAL_KEY } from "../App";
+
 export default function Form({ reminders, setReminders }) {
   const [imePolje, setImePolje] = useState("");
   const [reminderPolje, setReminderPolje] = useState("");
@@ -22,6 +24,10 @@ export default function Form({ reminders, setReminders }) {
       return (
         e.preventDefault(),
         setReminders([...reminders, newReminder]),
+        localStorage.setItem(
+          LOCAL_KEY,
+          JSON.stringify([...reminders, newReminder])
+        ),
         setImePolje(""),
         setReminderPolje("")
       );

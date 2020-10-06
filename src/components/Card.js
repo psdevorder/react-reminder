@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { LOCAL_KEY } from "../App";
 
 export default function Card({ reminders, reminder, setReminders }) {
   const [editMode, setEditMode] = useState(false);
@@ -25,6 +26,10 @@ export default function Card({ reminders, reminder, setReminders }) {
       remindTo: reminderPolje.trim(),
       datum: reminder.datum,
     };
+    const localData = [
+      ...reminders.filter((item) => reminder.id !== item.id),
+      editedReminder,
+    ];
     if (
       imePolje === "" ||
       reminderPolje === "" ||
@@ -35,10 +40,8 @@ export default function Card({ reminders, reminder, setReminders }) {
     } else
       return (
         e.preventDefault(),
-        setReminders([
-          ...reminders.filter((item) => reminder.id !== item.id),
-          editedReminder,
-        ]),
+        setReminders(localData),
+        localStorage.setItem(LOCAL_KEY, JSON.stringify(localData)),
         setImePolje(""),
         setReminderPolje(""),
         setEditMode(false)
