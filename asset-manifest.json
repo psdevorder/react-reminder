@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/reactreminder/static/css/main.4b94a3e8.chunk.css",
+    "main.js": "/reactreminder/static/js/main.03efc56a.chunk.js",
+    "main.js.map": "/reactreminder/static/js/main.03efc56a.chunk.js.map",
+    "runtime-main.js": "/reactreminder/static/js/runtime-main.5624384c.js",
+    "runtime-main.js.map": "/reactreminder/static/js/runtime-main.5624384c.js.map",
+    "static/js/2.dd6b4795.chunk.js": "/reactreminder/static/js/2.dd6b4795.chunk.js",
+    "static/js/2.dd6b4795.chunk.js.map": "/reactreminder/static/js/2.dd6b4795.chunk.js.map",
+    "index.html": "/reactreminder/index.html",
+    "precache-manifest.d45ff609074579567fe657ef7369c029.js": "/reactreminder/precache-manifest.d45ff609074579567fe657ef7369c029.js",
+    "service-worker.js": "/reactreminder/service-worker.js",
+    "static/css/main.4b94a3e8.chunk.css.map": "/reactreminder/static/css/main.4b94a3e8.chunk.css.map",
+    "static/js/2.dd6b4795.chunk.js.LICENSE.txt": "/reactreminder/static/js/2.dd6b4795.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5624384c.js",
+    "static/js/2.dd6b4795.chunk.js",
+    "static/css/main.4b94a3e8.chunk.css",
+    "static/js/main.03efc56a.chunk.js"
+  ]
+}
