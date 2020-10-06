@@ -5,13 +5,13 @@ import { LOCAL_KEY } from "../App";
 export default function Form({ reminders, setReminders }) {
   const [imePolje, setImePolje] = useState("");
   const [reminderPolje, setReminderPolje] = useState("");
-
+  let [date] = new Date().toLocaleDateString().split("/");
   function hendlajSubmit(e) {
     const newReminder = {
       id: Math.floor(Math.random() * 100000),
       ime: imePolje.trim(),
       remindTo: reminderPolje.trim(),
-      datum: Date.now().toString(),
+      datum: date,
     };
     if (
       imePolje === "" ||
@@ -36,8 +36,9 @@ export default function Form({ reminders, setReminders }) {
   return (
     <section className="inputSection">
       <form onSubmit={hendlajSubmit}>
-        <label htmlFor="person">Remind</label>
+        <label htmlFor="person">Title</label>
         <input
+          autoComplete="off"
           type="text"
           name="person"
           id="person"
@@ -45,8 +46,9 @@ export default function Form({ reminders, setReminders }) {
           size="10"
           onChange={(e) => setImePolje(e.target.value)}
         />
-        <label htmlFor="reminder">to</label>
+        <label htmlFor="reminder">Text</label>
         <input
+          autoComplete="off"
           type="text"
           name="reminder"
           id="reminder"
